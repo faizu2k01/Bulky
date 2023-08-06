@@ -1,0 +1,70 @@
+﻿@model Product
+
+
+<div class="card">
+    <div class="card-header bg-secondary bg-gradient my-3-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="text-white py-2">Delete Product</h3>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-body p-4">
+        <form method="post" class="row">
+            <div class="border p-3">
+                @*<div class="text-danger-emphasis" asp-validation-summary="All"></div>*@
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="Title" disabled class="form-control border-0 shadow" />
+                    <label asp-for="Title" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <textarea asp-for="Description" disabled class="form-control border-0 shadow" ></textarea>
+                    <label asp-for="Description" class="mxs2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="ISBN" disabled class="form-control border-0 shadow" />
+                    <label asp-for="ISBN" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <textarea asp-for="Author" disabled class="form-control border-0 shadow"></textarea>
+                    <label asp-for="Author" class="mxs2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <textarea asp-for="Price" disabled class="form-control border-0 shadow"></textarea>
+                    <label asp-for="Price" class="mxs2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="ListPrice" class="form-control border-0 shadow" />
+                    <label asp-for="ListPrice" class="ms-2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <textarea asp-for="Price50" class="form-control border-0 shadow"></textarea>
+                    <label asp-for="Price50" class="mxs2"></label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <textarea asp-for="Price100" class="form-control border-0 shadow"></textarea>
+                    <label asp-for="Price100" class="mxs2"></label>
+                </div>
+                <div class="row pb-4 mt-4">
+                    <div class="col-6 col-md-3">
+                        <button class="btn btn-outline-primary form-control" type="submit">Delete</button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a class="btn btn-outline-secondary form-control" asp-controller="Product" asp-action="Index">Back</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
